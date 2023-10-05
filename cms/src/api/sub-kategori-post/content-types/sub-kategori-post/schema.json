@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sub_kategori_posts",
+  "info": {
+    "singularName": "sub-kategori-post",
+    "pluralName": "sub-kategori-posts",
+    "displayName": "Sub-kategori-post"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sub_kategori": {
+      "type": "string"
+    },
+    "kategori_posts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::kategori-post.kategori-post",
+      "inversedBy": "sub_kategori_posts"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::post.post",
+      "inversedBy": "sub_kategori_posts"
+    }
+  }
+}

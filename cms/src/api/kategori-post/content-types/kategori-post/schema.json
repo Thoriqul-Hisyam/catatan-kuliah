@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kategori_posts",
+  "info": {
+    "singularName": "kategori-post",
+    "pluralName": "kategori-posts",
+    "displayName": "kategori-post",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "kategori_post": {
+      "type": "string"
+    },
+    "sub_kategori_posts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sub-kategori-post.sub-kategori-post",
+      "mappedBy": "kategori_posts"
+    }
+  }
+}

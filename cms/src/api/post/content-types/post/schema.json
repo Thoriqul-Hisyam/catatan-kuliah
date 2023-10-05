@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "post",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tittle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "embed": {
+      "type": "string"
+    },
+    "img_post": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "tittle"
+    },
+    "date": {
+      "type": "date"
+    },
+    "sub_kategori_posts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sub-kategori-post.sub-kategori-post",
+      "mappedBy": "posts"
+    }
+  }
+}

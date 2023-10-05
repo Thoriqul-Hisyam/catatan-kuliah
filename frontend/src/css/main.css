@@ -1,0 +1,9 @@
+.truncate-desc {
+    -webkit-line-clamp: 4;
+    display: block;
+    text-align: left;
+    -webkit-box-orient: vertical;
+    /* -webkit-box-orient: horizontal; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
