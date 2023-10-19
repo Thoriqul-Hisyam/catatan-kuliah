@@ -28,27 +28,25 @@ function Home() {
     }, [])
 
     return (
-        <div className="container-fluid">
-
-
-
-
-            <div className="grid justify-center ">
-                <h2 className="text-3xl font-semibold my-2 text-left px-4">Terbaru</h2>
+        <div className="container-fluid mt-3">
+            <div className="grid justify-center">
+                <h2 className="text-3xl font-semibold my-2 text-left px-4">Terupdate</h2>
                 <div className="row">
-                    <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2  gap-4 px-4 bg-indigo-200 py-8 ">
+                    <div className="grid grid-cols-1 ">
                         {posts.map(post => {
                             return (
-                                <div className="grid border-0 justify-items-center">
+                                <div className="grid  border-0 justify-items-center">
                                     <div className="container" >
-                                        <a href={`/${post.sub_kategori_posts}/${[post.attributes.slug]}`}>
+
+                                        <a href={`/${post.sub_kategori_posts}/${[post.attributes.slug]}`} className="grid grid-cols-2 gap-x-3 my-3">
 
                                             <Card
                                                 imgAlt={post.attributes.tittle}
-                                                className="border-0  h-48"
+                                                className="border-0  h-48 "
                                                 imgSrc={post.attributes.embed}
                                             />
-                                            <div className="px-2">
+
+                                            <div className="px-2 grid-cols-1">
                                                 <h5 className="line-clamp-2 mb-1 text-md font-bold tracking-tight text-left text-gray-900 dark:text-white">
                                                     {post.attributes.tittle}
                                                 </h5>
